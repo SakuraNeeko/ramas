@@ -1,3 +1,91 @@
-body { font-family: sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; }
-.comando { background: white; padding: 15px; margin-bottom: 10px; border-left: 5px solid #2ecc71; border-radius: 4px; }
-h1 { color: #2c3e50; }
+/* ==========================================
+   ESTILOS GENERALES 
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f8; /* Gris azulado muy claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+
+/* ==========================================
+   ENCABEZADO (HEADER)
+   ========================================== */
+header {
+    background: linear-gradient(135deg, #F1502F, #d93a19); /* Colores oficiales de Git */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 8px 20px rgba(241, 80, 47, 0.25);
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL (GRID)
+   ========================================== */
+#contenedor {
+    display: grid;
+    /* Esto crea columnas que se adaptan automáticamente al tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   TARJETAS DE COMANDOS (SECTIONS)
+   ========================================== */
+.comando {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    border-left: 5px solid #F1502F; /* Borde naranja estilo Git */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de la tarjeta */
+.comando:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.comando h2 {
+    /* Fuente tipo código para que parezca una terminal */
+    font-family: 'Consolas', 'Courier New', monospace;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    background-color: #f0f2f5;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    border: 1px solid #e1e4e8;
+}
+
+.comando p {
+    color: #555;
+    font-size: 1.05rem;
+}
